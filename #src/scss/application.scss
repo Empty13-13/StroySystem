@@ -1,0 +1,142 @@
+.application {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-image: radial-gradient(circle at 50% -19912%,transparent 10000px,#fff 10003px)
+  }
+
+  // .application__wrapper
+  &__wrapper {
+    position: relative;
+    z-index: 2;
+  }
+
+  // .application__content
+  &__content {
+  }
+
+  // .application__body
+  &__body {
+  }
+
+  // .application__title
+  &__title {
+    color: $mainColor;
+    max-width: 575px;
+    margin: 0 auto;
+    text-align: center;
+    @include adaptiv-value('padding-top', 110, 60, 1);
+    @include adaptiv-value('margin-bottom', 100, 30, 1);
+  }
+
+  // .application__form
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  // .application__back
+  &__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    &:after {
+      content: '';
+      background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.56) 0%, #0F0F0F 100%);
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+
+  }
+}
+
+.form-application {
+  flex: 0 1 880px;
+  position: relative;
+  background: #F6F6F6;
+  border-radius: 17px;
+  margin-bottom: 77px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 102%;
+    height: 80%;
+    left: -1%;
+    top: 10%;
+    background: rgba(246, 246, 246, 0.5);
+    border-radius: 17px;
+    z-index: -1;
+
+  }
+
+
+  // .form-application__body
+  &__body {
+    padding: 30px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $md1+px) {
+      padding: 28px 42px;
+    }
+    @media (max-width: $md2+px) {
+      padding: 26px 34px;
+    }
+    @media (max-width: $md3+px) {
+      padding: 24px 27px;
+    }
+    @media (max-width: $md4+px) {
+      padding: 22px 23px;
+    }
+  }
+
+  &__half {
+    flex: 0 1 48%;
+    @media (max-width: $md3+px) {
+      flex: 1 1 auto;
+
+    }
+  }
+
+  // .form-application__button
+  &__button {
+    background: #F56C08;
+    border-radius: 13px;
+    flex: 0 1 352px;
+    @include adaptiv-value('padding', 25, 12, 1);
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+
+    @media (max-width: $md1+px) {
+      font-size: 19px;
+    }
+    @media (max-width: $md2+px) {
+      font-size: 18px;
+    }
+    @media (max-width: $md3+px) {
+      font-size: 16px;
+    }
+    @media (max-width: $md4+px) {
+      font-size: 15px;
+    }
+  }
+}

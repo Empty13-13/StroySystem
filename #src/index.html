@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Главная"
+})
+<body>
+<div class="wrapper">
+  @@include('_header.html',{})
+  <main class="page">
+
+    <section class="main">
+      <div class="main__wrapper">
+        <div class="main__content _container">
+          <div class="main__body">
+            <div class="main__column">
+              <h3 data-da=".main__content,1170,0" class="main__title">Строительная компания
+                <span>ООО "СТРОЙСИСТЕМА"</span>
+              </h3>
+              <ul class="main__list">
+                <li class="main__item _scr-item"><img src="img/mainSection/crane.svg" alt="" class="main__item-img">
+                  <p class="main__item-text">Строительство жилых и нежилых
+                                             зданий</p>
+                </li>
+                <li class="main__item _scr-item"><img src="img/mainSection/crane2.svg" alt="" class="main__item-img">
+                  <p class="main__item-text">Разборка и снос зданий</p>
+                </li>
+                <li class="main__item _scr-item"><img src="img/mainSection/scheme.svg" alt="" class="main__item-img">
+                  <p class="main__item-text">Деятельность в области архитектуры, связанная с созданием архитектурного
+                                             объекта</p>
+                </li>
+                <li class="main__item _scr-item"><img src="img/mainSection/tracktor.svg" alt="" class="main__item-img">
+                  <p class="main__item-text">Производство земляных работ</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main__column">
+              <form data-message="question" data-test action="#" class="main__form form-main">
+                <div class="form-main__body">
+                  <div class="form-main__title">Бесплатная консультация</div>
+                  <div class="form-main__up-inputs">
+                    <input tabindex="6" autocomplete="off" type="text" name="form[]" data-value="Имя"
+                           class="input input__name _req"/>
+                    <select tabindex="7" name="form[]" id="select" data-value="Город" class="form-main__select"
+                            data-default="1" style="display: none;">
+                      <option value="1">Москва</option>
+                      <option value="2">Санкт-Петербург</option>
+                      <option value="3">Майкоп</option>
+                      <option value="4">Барнаул</option>
+                      <option value="5">Благовещенск</option>
+                      <option value="6">Архангельск</option>
+                      <option value="7">Астрахань</option>
+                      <option value="8">Уфа</option>
+                      <option value="9">Белгород</option>
+                      <option value="10">Брянск</option>
+                      <option value="11">Улан-Удэ</option>
+                      <option value="12">Владимир</option>
+                      <option value="13">Вологда</option>
+                      <option value="14">Череповец</option>
+                      <option value="15">Воронеж</option>
+                      <option value="16">Махачкала</option>
+                      <option value="17">Биробиджан</option>
+                      <option value="18">Иваново</option>
+                      <option value="19">Иркутск</option>
+                      <option value="20">Нальчик</option>
+                      <option value="21">Калининград</option>
+                      <option value="22">Элиста</option>
+                      <option value="23">Калуга</option>
+                      <option value="24">Петропавловск-Камчатский</option>
+                      <option value="25">Петрозаводск</option>
+                      <option value="26">Кемерово</option>
+                      <option value="27">Киров</option>
+                      <option value="28">Сыктывкар</option>
+                      <option value="29">Кострома</option>
+                      <option value="30">Сочи</option>
+                      <option value="31">Краснодар</option>
+                      <option value="32">Красноярск</option>
+                      <option value="33">Курган</option>
+                      <option value="34">Курск</option>
+                      <option value="35">Липецк</option>
+                      <option value="36">Анадырь</option>
+                      <option value="37">Магадан</option>
+                      <option value="38">Йошкар-Ола</option>
+                      <option value="39">Саранск</option>
+                      <option value="40">Мурманск</option>
+                      <option value="41">Нижний Новгород</option>
+                      <option value="42">Великий Новгород</option>
+                      <option value="43">Новосибирск</option>
+                      <option value="44">Омск</option>
+                      <option value="45">Оренбург</option>
+                      <option value="46">Заречный</option>
+                      <option value="47">Пенза</option>
+                      <option value="48">Пермь</option>
+                      <option value="49">Владивосток</option>
+                      <option value="50">Псков</option>
+                    </select>
+                  </div>
+                  <input tabindex="8" autocomplete="off" type="text" name="form[]" data-value="Номер телефона"
+                         class="input _req _phone"/>
+                  <textarea tabindex="9" autocomplete="off" type="text" name="form[]" data-value="Задайте вопрос"
+                            class="input input__question_1 _req"/>Задайте вопрос</textarea>
+                  <input tabindex="10" autocomplete="off" type="text" name="form[]" data-value="E-mail"
+                         class="input _req _email"/>
+                  <button tabindex="11" type="submit" class="form-main__button">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main__background _ibg">
+        <img src="img/mainSection/back.jpg" alt="">
+      </div>
+    </section>
+
+    @@include('_servicesSection.html',{})
+    @@include('_application.html',{})
+    @@include('_photos.html',{})
+    @@include('_feedback.html',{})
+  </main>
+  @@include('_footer.html',{})
+</div>
+@@include('_popup.html',{})
+@@include('_js.html',{})
+</body>
+</html>
