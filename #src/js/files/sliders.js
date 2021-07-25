@@ -133,7 +133,7 @@ if(document.querySelector('.feedback__swiper')){
 
 		// effect: 'fade',
 		autoplay: {
-			delay: 3000,
+			delay: 6000,
 			disableOnInteraction: false,
 		},
 
@@ -155,8 +155,8 @@ if(document.querySelector('.feedback__swiper')){
 		},
 		// Arrows
 		navigation: {
-			nextEl: '.swiper-feedback_next',
-			prevEl: '.swiper-feedback_prev',
+			nextEl: '.swiper-arrow_next',
+			prevEl: '.swiper-arrow_prev',
 		},
 		// breakpoints: {
 		// 	320: {

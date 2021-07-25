@@ -5,8 +5,7 @@
 
   // .feedback__body
   &__body {
-    max-width: 860px;
-    margin: 0 auto;
+    position: relative;
 
     padding-bottom: 190px;
 
@@ -35,17 +34,24 @@
   // .feedback__swiper
   &__swiper {
   }
+
+  &__slider{
+    position: relative;
+    max-width: 860px;
+    margin: 0 auto;
+
+    @media (max-width:$md2+px){
+      max-width: 90%;
+    }
+    @media (max-width:$md3+px){
+      max-width: 100%;
+    }
+  }
 }
 
 .swiper-feedback {
 
-  // .swiper-feedback_prev
-  &_prev {
-  }
 
-  // .swiper-feedback_next
-  &_next {
-  }
 
   // .swiper-feedback__slide
   &__slide {
@@ -78,7 +84,7 @@
   // .swiper-feedback__column
   &__column {
     display: flex;
-    justify-content: stretch;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     &:first-child{
@@ -127,6 +133,8 @@
   // .swiper-feedback__dotts
   &__dotts {
     display: flex;
+    max-width: 860px;
+    margin: 0 auto;
     margin-top: 65px;
 
     @media (max-width: $md1+px) {
@@ -147,5 +155,30 @@
 .swiper-photos {
   // .swiper-photos__arrows
   &__arrows {
+  }
+}
+
+.swiper-arrow{
+  position: absolute;
+  width: 35px;
+  height: 64px;
+  top: 42%;
+  transform: translate(0, -50%);
+  transition: transform 0.3s ease 0s;
+  @media (max-width: $md3+px) {
+    display: none;
+  }
+  cursor: pointer;
+
+  // .swiper-feedback_prev
+  &_prev {
+    background: url('../img/photos/arrow-left.svg') 0 0 /contain no-repeat;
+    left: -45px;
+  }
+
+  // .swiper-feedback_next
+  &_next {
+    background: url('../img/photos/arrow-right.svg') 0 0 /contain no-repeat;
+    right: -45px;
   }
 }

@@ -17,7 +17,6 @@ async function form_submit(e) {
     const message = form.getAttribute('data-message');
     const ajax = form.getAttribute('data-ajax');
     let formData = new FormData(form);
-    console.log(formData)
 
 
     //SendForm
@@ -207,7 +206,6 @@ function select_init(select) {
   const select_modifikator = select.getAttribute('class');
   const select_selected_option = select.querySelector('option:checked');
   const select_tabindex = select.getAttribute('tabindex');
-  console.log(select_tabindex)
   select.setAttribute('data-default', select_selected_option.value);
   select.style.display = 'none';
 
@@ -498,61 +496,4 @@ function input_clear_mask(input, input_g_value) {
   input.inputmask.remove();
   input.value = input_g_value;
   input_focus_remove(input);
-}
-
-//QUANTITY
-let quantityButtons = document.querySelectorAll('.quantity__button');
-if (quantityButtons.length > 0) {
-  for (let index = 0; index < quantityButtons.length; index++) {
-    const quantityButton = quantityButtons[index];
-    quantityButton.addEventListener("click", function (e) {
-      let value = parseInt(quantityButton.closest('.quantity').querySelector('input').value);
-      if (quantityButton.classList.contains('quantity__button_plus')) {
-        value++;
-      } else {
-        value = value - 1;
-        if (value < 1) {
-          value = 1
-        }
-      }
-      quantityButton.closest('.quantity').querySelector('input').value = value;
-    });
-  }
-}
-
-//RANGE
-const priceSlider = document.querySelector('.price-filter__slider');
-if (priceSlider) {
-
-  let textFrom = priceSlider.getAttribute('data-from');
-  let textTo = priceSlider.getAttribute('data-to');
-
-  noUiSlider.create(priceSlider, {
-    start: [0, 200000],
-    connect: true,
-    tooltips: [wNumb({decimals: 0, prefix: textFrom + ' '}), wNumb({decimals: 0, prefix: textTo + ' '})],
-    range: {
-      'min': [0],
-      'max': [200000]
-    }
-  });
-
-  /*
-  const priceStart = document.getElementById('price-start');
-  const priceEnd = document.getElementById('price-end');
-  priceStart.addEventListener('change', setPriceValues);
-  priceEnd.addEventListener('change', setPriceValues);
-  */
-
-  function setPriceValues() {
-    let priceStartValue;
-    let priceEndValue;
-    if (priceStart.value != '') {
-      priceStartValue = priceStart.value;
-    }
-    if (priceEnd.value != '') {
-      priceEndValue = priceEnd.value;
-    }
-    priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
-  }
 }

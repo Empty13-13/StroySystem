@@ -111,6 +111,13 @@
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.045em;
+    opacity: 0;
+    transition: all 0.7s ease 0s;
+
+    &._active{
+      opacity: 1;
+    }
+    
   }
 
   // .block-compain__btn.btn
@@ -202,13 +209,10 @@
   // .block-advantages__body
   &__body {
     padding: 41px 50px;
-
     @include adaptiv-value('padding', 50, 23, 1);
     @include adaptiv-value('padding-top', 41, 18, 1);
     padding-bottom: 25px;
-
-
-
+    overflow: hidden;
   }
 
   // .block-advantages__title
@@ -242,6 +246,12 @@
     line-height: 140%;
     letter-spacing: 0.045em;
     max-width: 449px;
+    transform: translate(-100%,-100%);
+    transition: all 0.7s ease 0s;
+
+    &._active{
+      transform: translate(0,0);
+    }
 
     @media (max-width: $md3+px) {
       margin-bottom: 20px;
